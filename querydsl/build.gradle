@@ -31,10 +31,13 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
+
     //querydsl 추가
     implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
+
     implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
 
+    implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.8' // 외부라이브러리 쿼리문의 (?) 파라미터를 볼 수 있음 
 
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
